@@ -1,3 +1,26 @@
+//Completed January 27, 2021
+//https://www.codewars.com/kata/57faece99610ced690000165
+//Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+//solution assitance from https://stackoverflow.com/questions/40013415/remove-all-exclamation-marks-from-the-end-of-sentence
+function remove(s){
+  let i = s.length - 1;
+  
+  while(s[i] == "!"){
+     i--;
+  }
+  
+  return s.substring(0,i+1);
+}
+
+/*
+Started with reduce and ventured into regex. But with reduce couldn't get only the end and I don't know regex
+In the fucntion, first we establish the end of the string
+Then, we loop. 
+In the loop, we go backwards from the end until the end end of the string isn't !.
+Then we return the new substring
+*/
+
+
 // Completed January 19, 2021
 // https://www.codewars.com/kata/54da5a58ea159efa38000836
 // Find the odd int
