@@ -1,3 +1,27 @@
+//completed Feburary 17, 2021
+//https://www.codewars.com/kata/541c8630095125aba6000c00
+// help from https://stackoverflow.com/questions/50994765/digital-root-js
+// Sum of Digits / Digital Root
+
+function digital_root(n) {
+  let string = n.toString(),
+  sum = 0;
+
+  if (string.length === 1) {
+      return + string;
+  }
+  for (let i = 0; i <string.length; i++) {
+      sum += + string[i];
+  }
+  return digital_root(sum);
+}
+/* Discovered a new term " Unary_plus ". The unary plus operator converts its operand to Number type.
+So, first we take the number and convert it to a string. Then, if the string is longer than 1 character, we iterte through it.
+In each iteration, we take the string character -> convert it to a number -> add this number to a variable I've called sum. 
+Then when the loop is done we return the sum.
+*/
+
+
 //Completed February 17, 2021
 //https://www.codewars.com/kata/5266876b8f4bf2da9b000362
 //Who likes it? 
