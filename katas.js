@@ -1,3 +1,35 @@
+//Completed February 17, 2021
+// https://www.codewars.com/kata/514b92a657cdc65150000006
+// Multiples of 3 or 5
+
+function solution(number){
+  count = 0
+  let sum  = 0
+  
+  for (let i=0 ; i<number ; i++) {
+    if (count % 3 === 0 || count % 5 === 0 ) {
+      sum += count
+    }
+    count ++
+  }
+  return sum
+}
+/* you iterate upwards from 0, checking if the current number is divisible by 3 or 5. If yes, then you add that number to the sum, which is returned.
+Here I have an unnecessary variable in "count". The loop already does this count so I could refactor count completely out: 
+
+function solution(number){
+  let sum  = 0
+  
+  for (let i=0 ; i<number ; i++) {
+    if (i % 3 === 0 || i % 5 === 0 ) {
+      sum += i
+    }
+  }
+  return sum
+}
+*/
+
+
 //Completed January 27, 2021
 //https://www.codewars.com/kata/57faece99610ced690000165
 //Exclamation marks series #2: Remove all exclamation marks from the end of sentence
