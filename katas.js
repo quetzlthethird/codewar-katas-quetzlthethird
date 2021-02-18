@@ -1,3 +1,43 @@
+//completed February 18, 2021
+// https://www.codewars.com/kata/5264d2b162488dc400000001
+// Stop gninnipS My sdroW!
+
+function spinWords(word){
+  let newArr = [];
+  let splitByWord = word.split(' ')
+  
+  for (let word of splitByWord) {
+    if (word.length < 5) {
+      newArr += `${word} `
+    }
+    if (word.length >= 5) {
+      newArr += `${word.split("").reverse().join("")} `
+    }
+  }
+  return (newArr.slice(0,-1))
+}
+
+/*
+First I split the sentence into the individual words.
+Next I iterate through this array. If the word is less than 5 characters, I add it to a new array.
+If the word is great than 5 characters, I split, reverse, and the join it, then add it to the new array.
+Finally, I add for both word types a space at the end, which is sliced off during the return.
+
+Other examples use map and also ternary arguements: 
+function spinWords(words){
+  return words.split(' ').map( w => 
+    w.length < 5 ? w : w.split('').reverse().join('')).join(' ');
+}
+
+function spinWords(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
+*/
+
+
+
 //completed Feburary 17, 2021
 //https://www.codewars.com/kata/541c8630095125aba6000c00
 // help from https://stackoverflow.com/questions/50994765/digital-root-js
@@ -20,6 +60,7 @@ So, first we take the number and convert it to a string. Then, if the string is 
 In each iteration, we take the string character -> convert it to a number -> add this number to a variable I've called sum. 
 Then when the loop is done we return the sum.
 */
+
 
 
 //Completed February 17, 2021
