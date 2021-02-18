@@ -1,4 +1,40 @@
 //completed February 18, 2021
+//https://www.codewars.com/kata/5526fc09a1bbd946250002dc
+//Find The Parity Outlier
+
+function findOutlier(integers){
+  even = [];
+  odd = []
+  for (let i=0 ; i <integers.length ; i++) {
+    if (integers[i] % 2 === 0 )  {
+      even += integers[i]
+    }
+    else { 
+      odd += integers[i]
+    }
+  }
+  if (even.length > odd.length ) return + odd
+  return + even
+}
+/*
+First check if the integer is even or odd and add it to the correct new array. Then return whichever new array is smaller.
+I feel that this isn't the best solution as it filters through the entire array
+From other solutions: 
+
+function findOutlier(integers){
+  return integers.slice(0,3)
+    .filter(even).length >=2 ? integers.find(odd) : integers.find(even);
+}
+function even(num){
+  return (num % 2 == 0);
+}
+function odd(num){
+  return !even(num)
+}
+
+*/
+
+//completed February 18, 2021
 // https://www.codewars.com/kata/5264d2b162488dc400000001
 // Stop gninnipS My sdroW!
 
