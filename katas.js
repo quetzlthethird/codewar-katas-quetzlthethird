@@ -1,3 +1,26 @@
+//completed April 16, 2021
+//https://www.codewars.com/kata/525c65e51bf619685c000059
+//Pete, the baker
+
+function cakes(recipe, available) {
+  if (Object.keys(recipe).length > Object.keys(available).length) return 0;
+  
+  array = [];
+  for (let ing in recipe) {
+    array.push( Math.floor(available[ing] / recipe[ing]) )
+  }
+  return ( Math.min.apply(Math,array) )
+}
+
+/*
+First I compare the two objects. If the available ingredients is smaller than the recipe ingredients, I return 0 as no cake could be made. 
+Next, I want to compare the amounts the ingredient in each recipe. So, I start by interating through the recipe for the ingredient. 
+I want to know the result of dividing, so I create an empty array to push the result to.
+Then, you divide the ingredient amount in available by the recipe, flooring it, and push it to the array.
+Finally, you find the lowest number in the array and return it
+*/
+
+
 //completed February 18, 2021
 //https://www.codewars.com/kata/5526fc09a1bbd946250002dc
 //Find The Parity Outlier
