@@ -1,3 +1,30 @@
+//Completed May 31, 2021
+// https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
+//Persistant Bugger 
+// Used Snow's answer on https://stackoverflow.com/questions/54755266/multiplicative-persistence-codewars-challenge
+function persistence(num) {
+  let str = num.toString();
+  if (str.length === 1) {
+    return 0;
+  }
+  const nextNum = str.split('').reduce( (a, b) => a * b, 1);
+  return 1 + persistence(nextNum);
+}
+/*
+First, change number to a string. This lets you target the specific integers.
+Next, check the length. If it's 1, then that means the answer is 0. 
+After that, we need to split the number into it individual digits. (str.split). 
+From here, there's lots you can do but the reduce option is the most straight forward.
+reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduce( (a,b) => a*b, 1)
+ In the reduce, the index and array values are not needed. The initialValue is given as one, but the function works without it.
+ I assume that since "Calling reduce() on an empty array without an initialValue will throw a TypeError." that adding in the initialValue as 
+ 1 is a good practice to avoid TypeErrors.
+The reduce function does the multiplication until you end up at the final single number. 
+But the final line is magic to me. You run the new var nextNum through the function again and then add a 1. 
+*/
+
+
 //completed April 16, 2021
 //https://www.codewars.com/kata/525c65e51bf619685c000059
 //Pete, the baker
