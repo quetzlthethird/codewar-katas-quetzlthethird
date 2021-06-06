@@ -1,3 +1,20 @@
+//Completed June 6, 2021
+//https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript
+//Who Likes it?
+
+function likes(names) {
+  if (names.length < 1) return `no one likes this`;
+  if (names.length === 1) return `${names[0]} likes this`;
+  if (names.length === 2) return `${names[0]} and ${names[1]} like this`;
+  if (names.length === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  if (names.length >=3 ) return `${names[0]}, ${names[1]} and ${names.length-2} others like this`;
+}
+
+/*
+Very simple set of if statements. Would need to be refactored to allow for changing of 'likes" and 'it' (e.g. if "dislike" was to be displayed"
+Switch statements were a popular choice, but apparently they take more computational time.
+*/
+
 //Completed May 31, 2021
 // https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
 //Persistant Bugger 
